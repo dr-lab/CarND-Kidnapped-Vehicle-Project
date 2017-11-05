@@ -64,7 +64,9 @@ int main()
         if (event == "telemetry") {
           // j[1] is the data JSON object
 
-          cout << "Incoming data from simulator " << event << endl;
+          cout << "Incoming data from simulator "  << endl;
+            
+            cout << j  << endl;
 
           if (!pf.initialized()) {
 

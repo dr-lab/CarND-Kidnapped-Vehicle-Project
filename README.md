@@ -60,6 +60,10 @@ Based on the rubic, if the we run the application and simulator, and can see fol
 
   Incoming data from simulator telemetry
 
+      ["telemetry",{"previous_velocity":"12.0360","previous_yawrate":"-0.0077","sense_observations_x":"13.7097 -10.1452 -27.7571 38.9377 23.7620 ","sense_observations_y":"4.6331 -12.1277 4.4305 -12.2320 -33.6130 ","sense_theta":"0.0889","sense_x":"110.5597","sense_y":"18.4574"}]
+
+  Middle step outputs
+  
       highest w 0.0119507
       average w 0.00528024
 
