@@ -6,7 +6,7 @@ Your robot has been kidnapped and transported to a new location! Luckily it has 
 
 In this project I implement a 2 dimensional particle filter in C++. This particle filter will be given a map and some initial localization information (analogous to what a GPS would provide). At each time step your filter will also get observation and control data.
 
-[image1]: ./images/screenshot.png "screenshot"
+[image1]: ./imgs/screenshot.png "screenshot"
 
 ## Running the Code
 
@@ -35,6 +35,45 @@ Tips for setting up the environment can be found [here](https://classroom.udacit
 
 The meat of this project is in file  src/particle_filter.cpp, and particle_filter.h
 
+
+## Inputs to the Particle Filter
+The particle filter data are in in the `data` directory.
+
+#### The Map*
+`map_data.txt` includes the position of landmarks (in meters) on an arbitrary Cartesian coordinate system. Each row has three columns
+1. x position
+2. y position
+3. landmark id
+
+### All other data the simulator provides, such as observations and controls.
+
+> * Map data provided by 3D Mapping Solutions GmbH.
+
+## Pass Criteria
+
+Based on the rubic, if the we run the application and simulator, and can see following screen means meets the rubic.  Please see following screenshot which show the "Success" pass.
+
+![Pass Criteria][screenshot]
+
+
+## Sample Data
+
+Input from simulator
+
+  Incoming data from simulator telemetry
+
+  highest w 0.0119507
+  average w 0.00528024
+
+Output from application, send back to simulator
+
+  Message send back to simulator:
+  42["best_particle",{"best_particle_associations":"","best_particle_sense_x":"","best_particle_sense_y":"","best_particle_theta":0.144708547691593,"best_particle_x":46.3871959955385,"best_particle_y":12.7109229708847}]
+
+
+## P.S.
+
+# Data Protocol between Simulator and Application
 
 Here is the main protcol that main.cpp uses for uWebSocketIO in communicating with the simulator.
 
@@ -90,7 +129,7 @@ Your job is to build out the methods in `particle_filter.cpp` until the simulato
 Success! Your particle filter passed!
 ```
 
-# Implementing the Particle Filter
+# Directory Structure
 The directory structure of this repository is as follows:
 
 ```
@@ -113,41 +152,3 @@ root
     |   particle_filter.cpp
     |   particle_filter.h
 ```
-
-The only file you should modify is `particle_filter.cpp` in the `src` directory. The file contains the scaffolding of a `ParticleFilter` class and some associated methods. Read through the code, the comments, and the header file `particle_filter.h` to get a sense for what this code is expected to do.
-
-If you are interested, take a look at `src/main.cpp` as well. This file contains the code that will actually be running your particle filter and calling the associated methods.
-
-## Inputs to the Particle Filter
-You can find the inputs to the particle filter in the `data` directory.
-
-#### The Map*
-`map_data.txt` includes the position of landmarks (in meters) on an arbitrary Cartesian coordinate system. Each row has three columns
-1. x position
-2. y position
-3. landmark id
-
-### All other data the simulator provides, such as observations and controls.
-
-> * Map data provided by 3D Mapping Solutions GmbH.
-
-## Pass Criteria
-
-Based on the rubic, if the we run the application and simulator, and can see following screen means meets the rubic.  Please see following screenshot which show the "Success" pass.
-
-![Pass Criteria][screenshot]
-
-
-## Sample Data
-
-Input from simulator
-
-  Incoming data from simulator telemetry
-
-  highest w 0.0119507
-  average w 0.00528024
-
-Output from application, send back to simulator
-
-  Message send back to simulator:
-  42["best_particle",{"best_particle_associations":"","best_particle_sense_x":"","best_particle_sense_y":"","best_particle_theta":0.144708547691593,"best_particle_x":46.3871959955385,"best_particle_y":12.7109229708847}]
