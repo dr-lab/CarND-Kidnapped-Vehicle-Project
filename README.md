@@ -53,10 +53,10 @@ The particle filter data are in in the `data` directory.
 
 Based on the rubic, if the we run the application and simulator, and can see following screen means meets the rubic.  Please see following screenshot which show the "Success" pass.
 
-![Pass Criteria][screenshot]
+![Pass Criteria][image1]
 
 
-## Sample Data
+## Sample Data between Simulator and Application
 
 Input from simulator
 
@@ -71,65 +71,59 @@ Output from application, send back to simulator
   42["best_particle",{"best_particle_associations":"","best_particle_sense_x":"","best_particle_sense_y":"","best_particle_theta":0.144708547691593,"best_particle_x":46.3871959955385,"best_particle_y":12.7109229708847}]
 
 
-## P.S.
+# P.S.
 
-# Data Protocol between Simulator and Application
+## Data Protocol between Simulator and Application
 
-Here is the main protcol that main.cpp uses for uWebSocketIO in communicating with the simulator.
+Here is the main protocol that main.cpp uses for uWebSocketIO in communicating with the simulator.
 
-INPUT: values provided by the simulator to the c++ program
+  INPUT: values provided by the simulator to the c++ program
 
-// sense noisy position data from the simulator
+      // sense noisy position data from the simulator
 
-["sense_x"]
+      ["sense_x"]
 
-["sense_y"]
+      ["sense_y"]
 
-["sense_theta"]
+      ["sense_theta"]
 
-// get the previous velocity and yaw rate to predict the particle's transitioned state
+      // get the previous velocity and yaw rate to predict the particle's transitioned state
 
-["previous_velocity"]
+      ["previous_velocity"]
 
-["previous_yawrate"]
+      ["previous_yawrate"]
 
-// receive noisy observation data from the simulator, in a respective list of x/y values
+      // receive noisy observation data from the simulator, in a respective list of x/y values
 
-["sense_observations_x"]
+      ["sense_observations_x"]
 
-["sense_observations_y"]
-
-
-OUTPUT: values provided by the c++ program to the simulator
-
-// best particle values used for calculating the error evaluation
-
-["best_particle_x"]
-
-["best_particle_y"]
-
-["best_particle_theta"]
-
-//Optional message data used for debugging particle's sensing and associations
-
-// for respective (x,y) sensed positions ID label
-
-["best_particle_associations"]
-
-// for respective (x,y) sensed positions
-
-["best_particle_sense_x"] <= list of sensed x positions
-
-["best_particle_sense_y"] <= list of sensed y positions
+      ["sense_observations_y"]
 
 
-Your job is to build out the methods in `particle_filter.cpp` until the simulator output says:
+  OUTPUT: values provided by the c++ program to the simulator
 
-```
-Success! Your particle filter passed!
-```
+      // best particle values used for calculating the error evaluation
 
-# Directory Structure
+      ["best_particle_x"]
+
+      ["best_particle_y"]
+
+      ["best_particle_theta"]
+
+      //Optional message data used for debugging particle's sensing and associations
+
+      // for respective (x,y) sensed positions ID label
+
+      ["best_particle_associations"]
+
+      // for respective (x,y) sensed positions
+
+      ["best_particle_sense_x"] <= list of sensed x positions
+
+      ["best_particle_sense_y"] <= list of sensed y positions
+
+
+## Directory Structure
 The directory structure of this repository is as follows:
 
 ```
