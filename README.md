@@ -58,17 +58,14 @@ Based on the rubic, if the we run the application and simulator, and can see fol
 
 ## Sample Data between Simulator and Application
 
-Input from simulator
-
   Incoming data from simulator telemetry
 
-  highest w 0.0119507
-  average w 0.00528024
+      highest w 0.0119507
+      average w 0.00528024
 
 Output from application, send back to simulator
 
-  Message send back to simulator:
-  42["best_particle",{"best_particle_associations":"","best_particle_sense_x":"","best_particle_sense_y":"","best_particle_theta":0.144708547691593,"best_particle_x":46.3871959955385,"best_particle_y":12.7109229708847}]
+      42["best_particle",{"best_particle_associations":"","best_particle_sense_x":"","best_particle_sense_y":"","best_particle_theta":0.144708547691593,"best_particle_x":46.3871959955385,"best_particle_y":12.7109229708847}]
 
 
 # P.S.
